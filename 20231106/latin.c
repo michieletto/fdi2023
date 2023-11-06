@@ -153,7 +153,7 @@ void reduce(int square[], int size) {
     {
         // debug print
         printf("index: %d     square[%d]: %d\n", i, i, square[i*size]-1);
-        print_reduced(square, size);
+        print_matrix(square, size);
         // if the value at index i is i+1, then the row is ok
         if ((square[i*size]-1) == i)
             // move to the next row
@@ -207,7 +207,7 @@ int main() {
         reduce(square, size);
         // Print the reduced matrix
         printf("\nThe reduced matrix is:\n");
-        print_reduced(square, size);
+        print_matrix(square, size);
     }    
 
     return 0;
