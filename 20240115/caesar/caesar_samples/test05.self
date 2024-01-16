@@ -1,0 +1,2 @@
+fondamentidiinformatica
+6

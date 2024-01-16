@@ -19,4 +19,14 @@ struct Node* new_node(int value);
 //    i valori presenti nel vettore sommando gli 1 consecutivi e seperati da 0
 struct Node* fill_list(int *start, int* end);
 
+/*
+nonogramrow([]) => []
+nonogramrow([0,0,0,0,0]) => []
+nonogramrow([1,1,1,1,1]) => [5]
+nonogramrow([0,1,1,1,1,1,0,1,1,1,1]) => [5,4]
+nonogramrow([1,1,0,1,0,0,1,1,1,0,0]) => [2,1,3]
+nonogramrow([0,0,0,0,1,1,0,0,1,0,1,1,1]) => [2,1,3]
+nonogramrow([1,0,1,0,1,0,1,0,1,0,1,0,1,0,1]) => [1,1,1,1,1,1,1,1]
+*/
+
 #endif // __NONOGRAM_H__
