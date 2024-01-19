@@ -10,7 +10,14 @@
  *      [elemento1 elemento2 ... elementoN]
 **/
 void print_array(int *start, int *end) {
-
+    // Stampa le parentesi quadre aperte
+    printf("[");
+    // Stampa gli elementi dell'array
+    for(int *i = start; i <= end; i++) {
+        printf(" %d", *i);
+    }
+    // Stampa le parentesi quadre chiuse
+    printf(" ]\n");
 }
 
 /**
@@ -21,7 +28,10 @@ void print_array(int *start, int *end) {
  *      (es. [1 2 3] -> [2 4 6])
 **/
 void twice_array(int *start, int *end) {
-
+    // Raddoppia il valore di ogni elemento dell'array
+    for(int *i = start; i <= end; i++) {
+        *i *= 2;
+    }
 }
 
 /**
@@ -32,7 +42,14 @@ void twice_array(int *start, int *end) {
  * @note se l'array è vuoto, restituisce 0
 **/
 int sum_array(int *start, int *end) {
-    return 0;
+    // Variabile di appoggio per la somma
+    int sum = 0;
+    // Somma gli elementi dell'array
+    for(int *i = start; i <= end; i++) {
+        sum += *i;
+    }
+    // Restituisce la somma
+    return sum;
 }
 
 /**
@@ -43,7 +60,16 @@ int sum_array(int *start, int *end) {
  *     (es. [1 2 3] -> [3 2 1])
 **/
 void reverse_array(int *start, int *end) {
-
+    // Variabile di appoggio per lo scambio
+    int tmp = 0;
+    // Inverte l'ordine degli elementi dell'array
+    // incrementando il puntatore di inizio e decrementando
+    // il puntatore di fine finchè non si incontrano
+    for(int *i = start, *j = end; i < j; i++, j--) {
+        tmp = *i;
+        *i = *j;
+        *j = tmp;
+    }
 }
 
 /**
@@ -55,5 +81,12 @@ void reverse_array(int *start, int *end) {
  * @note se l'elemento è presente più volte, restituisce una delle occorrenze
 **/
 int *find_array(int *start, int *end, int value) {
+    // Cerca l'elemento nell'array
+    for(int *i = start; i <= end; i++) {
+        if (*i == value) {
+            return i;
+        }
+    }
+    // Se non è stato trovato, restituisce NULL
     return NULL;
 }
